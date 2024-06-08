@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head"); -%>
+  <body>
+    <%- include("partials/header"); -%>
+    <main class="container mt-3">
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <% blogs.forEach(({title, username, text, createdAt }) => { %> <%-
+          include("partials/card", {title, username, text, time:
+          createdAt.toLocaleString() }) -%> <% }) %>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
